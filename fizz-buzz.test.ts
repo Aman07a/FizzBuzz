@@ -17,10 +17,8 @@ describe("fizz-buzz", () => {
         // Arrange
         const expected = "Fizz";
         const sut = createFizzBuzz();
-
         // Act
         const actual = sut.go(input);
-
         // Assert
         expect(actual).toBe(expected);
       }
@@ -34,10 +32,8 @@ describe("fizz-buzz", () => {
         // Arrange
         const expected = "Buzz";
         const sut = createFizzBuzz();
-
         // Act
         const actual = sut.go(input);
-
         // Assert
         expect(actual).toBe(expected);
       }
@@ -51,10 +47,8 @@ describe("fizz-buzz", () => {
         // Arrange
         const expected = "FizzBuzz";
         const sut = createFizzBuzz();
-
         // Act
         const actual = sut.go(input);
-
         // Assert
         expect(actual).toBe(expected);
       }
@@ -70,10 +64,8 @@ describe("fizz-buzz", () => {
     ])("$input", ({ input, expected }) => {
       // Arrange
       const sut = createFizzBuzz();
-
       // Act
       const actual = sut.go(input);
-
       // Assert
       expect(actual).toBe(expected);
     });
