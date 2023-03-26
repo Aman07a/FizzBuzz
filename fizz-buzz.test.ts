@@ -43,4 +43,39 @@ describe("fizz-buzz", () => {
       }
     );
   });
+
+  describe("fizzbuzz", () => {
+    test.each([{ input: 15 }, { input: 30 }, { input: 45 }])(
+      "$input",
+      ({ input }) => {
+        // Arrange
+        const expected = "FizzBuzz";
+        const sut = createFizzBuzz();
+
+        // Act
+        const actual = sut.go(input);
+
+        // Assert
+        expect(actual).toBe(expected);
+      }
+    );
+  });
+
+  describe("number itself", () => {
+    test.each([
+      { input: 1, expected: "1" },
+      { input: 2, expected: "2" },
+      { input: 4, expected: "4" },
+      { input: 76, expected: "76" },
+    ])("$input", ({ input, expected }) => {
+      // Arrange
+      const sut = createFizzBuzz();
+
+      // Act
+      const actual = sut.go(input);
+
+      // Assert
+      expect(actual).toBe(expected);
+    });
+  });
 });
